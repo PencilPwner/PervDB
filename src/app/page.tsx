@@ -56,7 +56,6 @@ export default function Home() {
       });
 
       if (response.ok) {
-        // Clear form
         setPhoto('');
         setLastName('');
         setFirstName('');
@@ -117,7 +116,6 @@ export default function Home() {
         try {
           const data = JSON.parse(event.target?.result as string);
           
-          // Parse name into last and first
           if (data.name) {
             const nameParts = data.name.split(',');
             setLastName(nameParts[0] || '');
