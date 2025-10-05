@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "People Database",
-  description: "Police-style people records database",
+  description: "pervbase",
 };
 
 export default function RootLayout({
