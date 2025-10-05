@@ -6,7 +6,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { photo, name, address, phoneNumber, marriedTo, status } = body;
 
-    // Validate required fields
     if (!name) {
       return NextResponse.json(
         { error: 'Name is required' },
@@ -14,7 +13,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create person record
     const person = await db.person.create({
       data: {
         photo: photo || null,
