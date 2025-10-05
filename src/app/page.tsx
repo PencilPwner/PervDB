@@ -74,7 +74,6 @@ export default function Home() {
     }
   };
 
-  // Export as PNG
   const exportAsPNG = async () => {
     if (formRef.current) {
       try {
@@ -92,7 +91,6 @@ export default function Home() {
     }
   };
 
-  // Export as JSON
   const exportAsJSON = () => {
     const data = {
       photo,
@@ -111,7 +109,6 @@ export default function Home() {
     link.click();
   };
 
-  // Import JSON
   const importJSON = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -143,7 +140,6 @@ export default function Home() {
     }
   };
 
-  // Export all database records as JSON
   const exportAllRecords = async () => {
     try {
       const response = await fetch('/api/people/export');
