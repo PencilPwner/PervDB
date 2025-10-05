@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,22 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "",
-  description: ".",
-  keywords: [""],
-  authors: [{ name: "" }],
-  openGraph: {
-    title: "",
-    description: "",
-    url: "",
-    siteName: "",
-    type: "",
-  },
-  twitter: {
-    card: "",
-    title: "",
-    description: "",
-  },
+  title: "People Database",
+  description: "Police-style people records database",
 };
 
 export default function RootLayout({
@@ -40,10 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
         {children}
-        <Toaster />
       </body>
     </html>
   );

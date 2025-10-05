@@ -157,17 +157,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white p-4">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-8 border-b border-gray-400 pb-4">
           <h1 className="text-4xl font-bold tracking-wider uppercase text-white">PERSONS DATABASE</h1>
           <p className="text-sm mt-2 tracking-widest text-gray-400">RECORDS DIVISION</p>
         </div>
 
-        {/* Main Form Card */}
         <Card ref={formRef} className="border border-gray-400 bg-black shadow-none rounded-none">
           <CardContent className="p-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Photo Section */}
               <div className="lg:col-span-1">
                 <div className="border border-gray-400 p-4 bg-gray-900 rounded-none">
                   <Label className="block text-sm font-bold mb-2 tracking-wider uppercase text-gray-300">PHOTO</Label>
@@ -193,9 +190,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Information Section */}
               <div className="lg:col-span-2 space-y-6">
-                {/* Name Fields */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="lastName" className="block text-sm font-bold mb-2 tracking-wider uppercase text-gray-300">LAST NAME</Label>
@@ -219,7 +214,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Address */}
                 <div>
                   <Label htmlFor="address" className="block text-sm font-bold mb-2 tracking-wider uppercase text-gray-300">ADDRESS</Label>
                   <Input
@@ -231,7 +225,6 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Phone Number */}
                 <div>
                   <Label htmlFor="phoneNumber" className="block text-sm font-bold mb-2 tracking-wider uppercase text-gray-300">PHONE NUMBER</Label>
                   <Input
@@ -243,7 +236,6 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Married To */}
                 <div>
                   <Label htmlFor="marriedTo" className="block text-sm font-bold mb-2 tracking-wider uppercase text-gray-300">MARRIED TO</Label>
                   <Input
@@ -255,7 +247,6 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Status */}
                 <div>
                   <Label className="block text-sm font-bold mb-2 tracking-wider uppercase text-gray-300">STATUS</Label>
                   <Select value={status} onValueChange={(value: 'contacted' | 'uncontacted') => setStatus(value)}>
@@ -271,7 +262,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Action Buttons */}
             <div className="flex justify-center gap-4 mt-8 pt-8 border-t border-gray-400 flex-wrap">
               <Button
                 onClick={handleSave}
@@ -319,7 +309,6 @@ export default function Home() {
               />
             </div>
 
-            {/* Success Message */}
             {isSaved && (
               <div className="mt-4 p-4 border border-gray-400 bg-gray-200 text-black text-center font-bold tracking-wider uppercase rounded-none">
                 {isSubmitting ? 'PROCESSING...' : 'RECORD SAVED'}
@@ -328,7 +317,6 @@ export default function Home() {
           </CardContent>
         </Card>
 
-        {/* Footer */}
         <div className="text-center mt-8 border-t border-gray-400 pt-4">
           <p className="text-xs tracking-widest uppercase text-gray-500">CONFIDENTIAL - FOR OFFICIAL USE ONLY</p>
         </div>
